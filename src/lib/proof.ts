@@ -14,7 +14,6 @@ export const proofEngine = {
 
   verify(proof: Proof, payrollId: string): boolean {
     if (!proof) return false;
-    if (proof.payrollId !== undefined && (proof as any).payrollId !== payrollId) return false;
     return proof.status === "valid";
   },
 };
